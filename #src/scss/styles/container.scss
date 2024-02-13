@@ -1,0 +1,10 @@
+.container {
+    margin: 0 auto;
+    max-width: $media-1;
+    @include pk() {
+        max-width: $media-2;
+    }
+    @include tb() {
+        max-width: $media-3;
+    }
+}

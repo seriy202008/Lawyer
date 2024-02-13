@@ -1,0 +1,45 @@
+.about {
+    &--container {
+        padding: var(--space) 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--body {
+        width: 720px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        @include pk() {
+            width: 100%;
+        }
+    }
+
+    &--text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &--buttons {
+        display: flex;
+        gap: 24px;
+        @include tb() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &--image {
+        width: 535px;
+        img {
+            width: 100%;
+        }
+        @include pk() {
+            display: none;
+        }
+    }
+}

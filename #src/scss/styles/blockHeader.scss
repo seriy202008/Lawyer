@@ -1,0 +1,93 @@
+.blockHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @include tb() {
+        gap: 24px;
+    }
+    &--title {
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            background-color: #4f8ff0;
+            transform: translate(-50%, 0);
+        }
+        span {
+            color: $first;
+        }
+        @include pk() {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @include tb() {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    &--text {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        @include tb() {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &--right {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        span:first-child,
+        span:last-child {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            border-right: 3px solid $first;
+            border-bottom: 3px solid $first;
+        }
+        span:first-child {
+            transform: rotate(135deg);
+        }
+        span:last-child {
+            transform: rotate(-45deg);
+        }
+        span:nth-child(2) {
+            display: block;
+            width: 3px;
+            height: 32px;
+            background-color: $first;
+            transform: rotate(26deg);
+        }
+        @include tb() {
+            display: none;
+        }
+    }
+    &-left &--title {
+        text-align: left;
+        &::after {
+            left: 0;
+            transform: translate(0, 0);
+        }
+    }
+    &-left &--text {
+        text-align: left;
+    }
+    &-spaceBetween {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

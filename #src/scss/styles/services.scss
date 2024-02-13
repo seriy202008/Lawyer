@@ -1,0 +1,162 @@
+.services {
+    background-color: $bg;
+    &--container {
+        padding: var(--space) 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        @include tb() {
+            gap: 24px;
+        }
+    }
+
+    &--header {
+        width: 920px;
+        @include pk() {
+            width: 100%;
+        }
+    }
+
+    &--body {
+        width: 100%;
+    }
+
+    &--swiper {
+        @include tb() {
+            width: 250px !important;
+            overflow: visible;
+            margin: 0;
+        }
+    }
+
+    &--wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 38px 24px;
+        @include pk() {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        @include tb() {
+            display: flex;
+            gap: 0;
+        }
+    }
+
+    &--card {
+        @media (min-width: calc($media-3 + 1px)) {
+            width: auto !important;
+        }
+        padding: 20px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 250ms;
+        position: relative;
+        &:hover {
+            background-color: $first;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-top: 1px solid #fff;
+            border-left: 1px solid #fff;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-top: 1px solid #fff;
+            border-right: 1px solid #fff;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        @include pk() {
+            padding: 32px 32px 32px 40px;
+        }
+        @include tb() {
+            width: 250px !important;
+            padding: 26px 16px 32px;
+            height: 270px;
+        }
+    }
+
+    &--content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 35px 0;
+        &::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-bottom: 1px solid #fff;
+            border-left: 1px solid #fff;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        @include pk() {
+            padding: 0;
+        }
+        @include tb() {
+        }
+    }
+
+    &--icon {
+        &::before {
+            color: $first;
+            font-size: 29px;
+            transition: all 250ms;
+        }
+    }
+
+    &--card:hover &--icon::before,
+    &--card:hover &--name,
+    &--card:hover &--text {
+        color: #fff;
+    }
+
+    &--name {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 30px;
+        text-align: center;
+        transition: all 250ms;
+        @include pk() {
+            line-height: 24px;
+        }
+    }
+
+    &--text {
+        margin-top: -8px;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        transition: all 250ms;
+        @include pk() {
+            font-weight: 300;
+        }
+    }
+
+}

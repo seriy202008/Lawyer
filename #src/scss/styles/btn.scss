@@ -1,0 +1,39 @@
+.btn {
+    display: block;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $first;
+    cursor: pointer;
+    transition: all 250ms;
+    &:link,
+    &:visited {
+        color: #fff;
+        background-color: $first;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+        background-color: #2b7bf1;
+    }
+
+    &-white {
+        background-color: #e6e6e6;
+        color: #222;
+        &:link,
+        &:visited {
+            background-color: #e6e6e6;
+            color: #222;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #c5c5c5;
+            color: #222;
+        }
+    }
+}

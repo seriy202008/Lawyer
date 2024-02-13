@@ -1,0 +1,104 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    &--container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--top {
+        background-color: #010101;
+        padding: 18px 0;
+    }
+    &--contacts {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+    &--contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+            font-size: 14px;
+            line-height: 16.8px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: all 250ms;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            p {
+                text-decoration: underline;
+                text-decoration-color: #fff;
+            }
+            .header--icon::before {
+                color: #fff;
+            }
+        }
+        @include tb() {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    &--icon::before {
+        font-size: 20px;
+        color: $first;
+        transition: all 250ms;
+    }
+
+    &--order {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+        color: $first;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all 250ms;
+        &:visited,
+        &:link {
+            color: $first;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+        }
+        &:focus,
+        &:hover {
+            color: $first;
+            text-decoration: underline;
+            text-decoration-color: $first;
+        }
+        &:active {
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: #fff;
+        }
+    }
+
+    &--body {
+        background-color: rgba(1, 1, 1, 0.761);
+        padding: 22px 0;
+    }
+
+    &--nav {
+        @include pk() {
+            display: none;
+        }
+    }
+
+    &--burger {
+        display: none;
+        @include pk() {
+            display: block;
+        }
+    }
+}

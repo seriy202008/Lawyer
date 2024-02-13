@@ -1,0 +1,62 @@
+.views {
+    position: relative;
+    &--container {
+        position: relative;
+        z-index: 5;
+        padding: var(--space) 0;
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+    }
+
+    &--swiper {
+        overflow: visible;
+
+        @include pk() {
+            width: 576px !important;
+            margin: 0;
+        }
+        @include tb() {
+            width: 342px !important;
+            margin: 0;
+        }
+    }
+
+    &--wrapper {
+        justify-content: space-between;
+        @include pk() {
+            height: 265px;
+        }
+        @include tb() {
+            height: 310px;
+        }
+    }
+
+    &--item {
+        @media (min-width: calc($media-2 + 1px)) {
+            width: auto !important;
+        }
+        flex: 0 0 648px;
+        @include pk() {
+            flex: 0 0 576px;
+            width: 576px !important;
+            height: 260px;
+        }
+        @include tb() {
+            flex: 0 0 342px;
+            width: 342px !important;
+            height: 310px;
+        }
+    }
+
+    &--buttons {
+        margin-top: -30px;
+        display: flex;
+        gap: 24px;
+        @include tb() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+}

@@ -1,0 +1,137 @@
+.footer {
+    color: #fff;
+    &--content {
+        background-color: #222222;
+    }
+
+    &--container {
+        padding: var(--space) 0 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--header {
+        padding-bottom: 48px;
+        border-bottom: 1px solid #8c8c8c;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include pk() {
+            padding-bottom: 44px;
+        }
+        @include tb() {
+            justify-content: center;
+            padding-bottom: 24px;
+        }
+    }
+
+    &--headerText {
+        flex: 0 0 862px;
+        font-size: 16px;
+        line-height: 19px;
+        @include pk() {
+            display: none;
+        }
+    }
+
+    &--body {
+        padding-top: 48px;
+        display: flex;
+        justify-content: space-between;
+        @include pk() {
+            gap: 24px;
+            padding-top: 24px;
+        }
+        @include tb() {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+    &--links {
+        flex: 0 1 30%;
+        @include pk() {
+            flex: 0 1 50%;
+        }
+        @include tb() {
+            flex: 0 1 auto;
+        }
+    }
+    &--nav {
+        flex: 0 1 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include pk() {
+            display: none;
+        }
+    }
+
+    &--link {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #fff;
+        transition: all 250ms;
+        &:link,
+        &:visited {
+            color: #fff;
+        }
+        &:active,
+        &:hover,
+        &:focus {
+            color: $first;
+        }
+    }
+
+    &--connect {
+        flex: 0 1 30%;
+        @include pk() {
+            flex: 0 1 50%;
+        }
+        @include tb() {
+            flex: 0 1 auto;
+        }
+    }
+
+    &--bottom {
+        background-color: #181818;
+    }
+
+    &--bottomContainer {
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        @include tb() {
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    &--copy {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &--politic {
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all 250ms;
+        &:link,
+        &:visited {
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+        }
+        &:active,
+        &:hover,
+        &:focus {
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: #fff;
+        }
+    }
+}
