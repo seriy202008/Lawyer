@@ -137,7 +137,6 @@ for (let i = 0; i < viewItems.length; i++) {
 let articleItems = document.querySelectorAll('.article--text');
 for (let i = 0; i < articleItems.length; i++) {
     const element = articleItems[i];
-    console.log(element.textContent.length);
     textOvf(element, 300)
 }
 
